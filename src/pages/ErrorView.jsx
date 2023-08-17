@@ -5,15 +5,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import { Link } from "react-router-dom";
 
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20vw;
-  height: 100vh;
-`;
+const StyledDiv = styled.div``;
 const StyledLottie = styled(Lottie)`
   width: 75vw;
 `;

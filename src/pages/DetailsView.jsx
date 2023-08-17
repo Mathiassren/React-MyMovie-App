@@ -88,4 +88,6 @@ export const DetailsViewData = async ({ params }) => {
   });
 };
 
+console.log(DetailsViewData);
+
 export default DetailsView;
