@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const StyledHeading = styled((props) => props.as)`
-  font-size: ${(props) => props.size}px;
+  font-size: ${(props) => props.size};
   ${(props) =>
     props.as === "h1" &&
     css`
