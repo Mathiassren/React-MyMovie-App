@@ -8,7 +8,11 @@ const StyledP = styled.p`
 `;
 
 const Release = (props) => {
-  return <StyledP>Release: {props.date}</StyledP>;
+  return (
+    <StyledP className="ease-in duration-300 dark:text-white">
+      Release: {props.date}
+    </StyledP>
+  );
 };
 
 export default Release;

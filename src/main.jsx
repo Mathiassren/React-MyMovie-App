@@ -4,6 +4,8 @@ import App from "./App";
 import DetailsView from "./pages/DetailsView";
 import ListView from "./pages/ListView";
 import ErrorView from "./pages/ErrorView";
+import Bookmark from "./pages/Bookmark";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
         loader={DetailsViewData}
         element={<DetailsView />}
       />
+      <Route path="/Bookmark" element={<Bookmark />} />
     </Route>
   )
 );

@@ -9,7 +9,7 @@ import axios from "axios";
 const ListView = () => {
   return (
     <>
-      <header className="gridContainer header">
+      <header className=" gridContainer header">
         <Switch justify="end" align="center" />
         <Heading title="MyMovies" size="16" as="h1" />
       </header>

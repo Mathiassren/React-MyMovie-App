@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import { Link } from "react-router-dom";
+import Navigation from "../components/Navigation";
 
 const StyledDiv = styled.div``;
 const StyledLottie = styled(Lottie)`
@@ -18,6 +19,7 @@ const ErrorView = () => {
       <Link to="/">
         <Button title="Take me home" />
       </Link>
+      <Navigation />
     </StyledDiv>
   );
 };

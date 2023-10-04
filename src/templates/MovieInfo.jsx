@@ -32,7 +32,7 @@ const MovieInfo = ({ data }) => {
     <StyledSection>
       <div className="flexContainer justify-space-between">
         <Heading title={data.title} size="20" as="h1" />
-        <StyledFaRegBookmark />
+        <StyledFaRegBookmark className="ease-in duration-300  ease-out dark:text-white" />
       </div>
       <Rating voteAverage={data.vote_average} />
       <StyledFlexSection>

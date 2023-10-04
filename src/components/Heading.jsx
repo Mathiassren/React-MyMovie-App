@@ -12,7 +12,11 @@ const StyledHeading = styled((props) => props.as)`
 `;
 
 const Heading = (props) => {
-  return <StyledHeading {...props}>{props.title}</StyledHeading>;
+  return (
+    <StyledHeading className="ease-in duration-300 dark:text-white" {...props}>
+      {props.title}
+    </StyledHeading>
+  );
 };
 
 export default Heading;

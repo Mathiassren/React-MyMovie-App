@@ -11,7 +11,11 @@ const StyledSpan = styled.span`
 `;
 
 const Label = (props) => {
-  return <StyledSpan>{props.title}</StyledSpan>;
+  return (
+    <StyledSpan className="ease-in duration-300 dark:text-indigo-200 dark:bg-indigo-900">
+      {props.title}
+    </StyledSpan>
+  );
 };
 
 export default Label;

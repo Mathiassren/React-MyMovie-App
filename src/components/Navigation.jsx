@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaFilm, FaTicketAlt, FaRegBookmark } from "react-icons/fa";
+import { Link, useLoaderData } from "react-router-dom";
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -17,10 +18,12 @@ const StyledNav = styled.nav`
 
 const Navigation = () => {
   return (
-    <StyledNav>
+    <StyledNav className="ease-in duration-300 dark:bg-stone-900">
       <FaFilm />
       <FaTicketAlt />
-      <FaRegBookmark />
+      <Link to="/Bookmark">
+        <FaRegBookmark />
+      </Link>
     </StyledNav>
   );
 };

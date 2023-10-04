@@ -12,7 +12,7 @@ const MovieCast = ({ data }) => {
   console.log("Cast ", data);
   return (
     <section>
-      <div className="flexContainer justify-space-between wrap">
+      <div className=" flexContainer justify-space-between wrap">
         <Heading title="Cast" size="16" as="h2" />
         <Button title="See More" />
         <NewLine />
