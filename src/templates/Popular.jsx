@@ -30,8 +30,7 @@ const Popular = () => {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiODU0ZWI7ODMxODdkN2VmMTk0MTdhMzMzYzUxZmQ4MyIsInN1YiI6IjY0NjFkZWI5NmUwZDcyMDBmZjRjMjI5ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TJEhXeG-5OOmJtyDrG9uvP9rUHJnKQvAWZJTGzHMrBE",
+        Authorization: "Bearer " + import.meta.env.VITE_TMDB_API_TOKEN,
       },
     };
 
