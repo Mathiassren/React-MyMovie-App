@@ -2,11 +2,12 @@ import styled from "styled-components";
 import Image from "../components/Image";
 import Rating from "../components/Rating";
 import Heading from "../components/Heading";
-import AddFavourite from "../components/AddFavorites";
+import FavoriteIcon from "../components/FavoriteIcon";
 import { Link, useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
-  height: 283px;
+  height: 320px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,16 +19,17 @@ const NowShowing = () => {
     <>
       {MovieData.nowShowing.map((data) => (
         <Link to={`details/${data.id}`} key={data.id}>
-          <StyledArticle>
+          <StyledArticle className="NowShowingHover">
             <figure className="image-container">
               <Image
                 width="143"
                 shadow={true}
                 src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`}
                 alt="Cover Image"
-              />{" "}
+              />
               <div className="overlay d-flex align-items-center justify-center">
-                <AddFavourite />
+                <p>add to favorite</p>
+                <FavoriteIcon />
               </div>
             </figure>
             <Heading

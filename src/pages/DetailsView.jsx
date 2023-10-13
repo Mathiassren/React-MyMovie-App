@@ -6,6 +6,7 @@ import Switch from "../components/Switch";
 import MovieCast from "../templates/MovieCast";
 import MovieDescription from "../templates/MovieDescription";
 import MovieInfo from "../templates/MovieInfo";
+import Navigation from "../components/Navigation";
 
 const StyledHeader = styled.header`
   display: grid;
@@ -66,6 +67,7 @@ const DetailsView = () => {
         <MovieDescription data={DetailData.details} />
         <MovieCast data={DetailData.cast} />
       </StyledMain>
+      <Navigation />
     </>
   );
 };

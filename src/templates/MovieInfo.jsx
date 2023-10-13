@@ -1,26 +1,26 @@
+import React from "react";
 import styled from "styled-components";
-import { FaRegBookmark } from "react-icons/fa";
+import FavoriteIcon from "../components/FavoriteIcon";
 import Heading from "../components/Heading";
-import Rating from "../components/Rating";
 import Label from "../components/Label";
+import Rating from "../components/Rating";
 
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 12px;
 `;
-const StyledFaRegBookmark = styled(FaRegBookmark)`
-  align-self: top;
-  padding-left: 25px;
-`;
-const StyledGridSection = styled.section`
-  display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
-`;
+
 const StyledFlexSection = styled.section`
   display: flex;
   gap: 8px;
 `;
+
+const StyledGridSection = styled.section`
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+`;
+
 const StyledP = styled.p`
   margin-top: 5px;
   font-weight: 500;
@@ -32,17 +32,17 @@ const MovieInfo = ({ data }) => {
     <StyledSection>
       <div className="flexContainer justify-space-between">
         <Heading title={data.title} size="20" as="h1" />
-        <StyledFaRegBookmark className="ease-in duration-300  ease-out dark:text-white" />
+        <FavoriteIcon />
       </div>
       <Rating voteAverage={data.vote_average} />
       <StyledFlexSection>
-        <Label title="action" />
-        <Label title="action" />
-        <Label title="action" />
+        {data.genres.map((genre) => (
+          <Label key={genre.id} title={genre.name} />
+        ))}
       </StyledFlexSection>
       <StyledGridSection>
         <Heading title="Length" size="12" as="h4" />
-        <Heading title="Langauge" size="12" as="h4" />
+        <Heading title="Language" size="12" as="h4" />
         <Heading title="Vote counts" size="12" as="h4" />
         <StyledP>{data.runtime} min.</StyledP>
         <StyledP>{data.original_language}</StyledP>

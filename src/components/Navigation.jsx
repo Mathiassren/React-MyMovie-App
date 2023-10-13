@@ -16,12 +16,16 @@ const StyledNav = styled.nav`
   box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 0.2);
 `;
 
+const linkStyle = {
+  color: "#979797", // You can set the text color to your preference
+};
+
 const Navigation = () => {
   return (
     <StyledNav className="ease-in duration-300 dark:bg-stone-900">
       <FaFilm />
       <FaTicketAlt />
-      <Link to="/Bookmark">
+      <Link style={linkStyle} to="/favorite">
         <FaRegBookmark />
       </Link>
     </StyledNav>
